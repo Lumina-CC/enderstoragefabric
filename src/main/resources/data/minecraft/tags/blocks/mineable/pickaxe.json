@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "linkedstorage:storageblock"
+    "enderstorage:ender_chest"
   ]
 }

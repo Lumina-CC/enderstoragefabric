@@ -1,0 +1,10 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enderstorage:item/portablestorage_open",
+    "layer1": "enderstorage:item/portablestorage_b1_open",
+    "layer2": "enderstorage:item/portablestorage_b2_open",
+    "layer3": "enderstorage:item/portablestorage_b3_open",
+    "layer4": "enderstorage:item/portablestorage_latch_open"
+  }
+}

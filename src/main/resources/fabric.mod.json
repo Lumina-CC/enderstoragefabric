@@ -1,34 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "linkedstorage",
+  "id": "enderstorage",
   "version": "1.5.1-1.19.3",
-  "name": "Linked Storage",
+  "name": "Ender Storage: Fabricated",
   "description": "Linkable storage's!",
   "authors": [
-    "kyrptonaught"
+    "kyrptonaught",
+    "Featherwhisker"
   ],
   "contact": {
-    "homepage": "https://github.com/kyrptonaught/linkedstorage",
-    "sources": "https://github.com/kyrptonaught/linkedstorage",
-    "issues": "https://github.com/kyrptonaught/linkedstorage/issues"
+    "homepage": "https://github.com/Lumina-CC/enderstoragefabric",
+    "sources": "https://github.com/Lumina-CC/enderstoragefabric",
+    "issues": "https://github.com/Lumina-CC/enderstoragefabric/issues"
   },
   "license": "MIT",
-  "icon": "assets/linkedstorage/icon.png",
+  "icon": "assets/enderstorage/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.kyrptonaught.linkedstorage.LinkedStorageMod"
+      "org.luminacc.enderstorage.LinkedStorageMod"
     ],
     "client": [
-      "net.kyrptonaught.linkedstorage.LinkedStorageModClient"
-    ],
-    "quickshulker": [
-      "net.kyrptonaught.linkedstorage.compat.Quickshulker"
+      "org.luminacc.enderstorage.LinkedStorageModClient"
     ]
   },
   "depends": {
     "fabricloader": ">=0.12.5",
-    "fabric": "*",
-    "java": ">=17"
+    "fabric": "*"
   }
 }

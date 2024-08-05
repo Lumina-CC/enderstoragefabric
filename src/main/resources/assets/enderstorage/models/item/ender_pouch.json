@@ -1,0 +1,18 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enderstorage:item/portablestorage",
+    "layer1": "enderstorage:item/portablestorage_b1",
+    "layer2": "enderstorage:item/portablestorage_b2",
+    "layer3": "enderstorage:item/portablestorage_b3",
+    "layer4": "enderstorage:item/portablestorage_latch"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "open": 1
+      },
+      "model": "enderstorage:item/ender_pouch_open"
+    }
+  ]
+}

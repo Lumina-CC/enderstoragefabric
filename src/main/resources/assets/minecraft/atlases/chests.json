@@ -2,7 +2,7 @@
 	"sources": [
 		{
 			"type": "single",
-			"resource": "linkedstorage:block/linkedstorage"
+			"resource": "enderstorage:block/ender_chest"
 		}
 	]
 }
