@@ -124,7 +124,7 @@ public class StorageBlock extends HorizontalFacingBlock implements BlockEntityPr
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getPlayerLookDirection().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     public BlockRenderType getRenderType(BlockState blockState_1) {
