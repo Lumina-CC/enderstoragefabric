@@ -21,8 +21,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LinkedStorageMod implements ModInitializer {
+    public static Logger LOGGER = LoggerFactory.getLogger("enderstorage_fabric");
     public static final String MOD_ID = "enderstorage";
     public static SpecialRecipeSerializer<TriDyableRecipe> triDyeRecipe;
     public static RecipeSerializer<CopyDyeRecipe> copyDyeRecipe;

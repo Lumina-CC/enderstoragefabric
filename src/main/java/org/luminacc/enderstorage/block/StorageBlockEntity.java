@@ -37,6 +37,7 @@ public class StorageBlockEntity extends OpenableBlockEntity {
     public void writeNbt(NbtCompound compoundTag_1) {
         super.writeNbt(compoundTag_1);
         dyeChannel.toTag(compoundTag_1);
+
     }
 
     LinkedInventory getLinkedInventory() {

@@ -4,9 +4,11 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.ItemEntity;
 import org.luminacc.enderstorage.LinkedStorageMod;
 import org.luminacc.enderstorage.network.OpenStoragePacket;
 import org.luminacc.enderstorage.network.SetDyePacket;
+import org.luminacc.enderstorage.register.ModBlocks;
 import org.luminacc.enderstorage.util.DyeChannel;
 import org.luminacc.enderstorage.util.LinkedInventoryHelper;
 import org.luminacc.enderstorage.util.PlayerDyeChannel;
@@ -165,6 +167,18 @@ public class StorageBlock extends HorizontalFacingBlock implements BlockEntityPr
             tooltip.add(((MutableText) text).formatted(Formatting.GRAY));
         }
     }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        StorageBlockEntity be = (StorageBlockEntity) world.getBlockEntity(pos);
+        ItemStack stack = new ItemStack(ModBlocks.storageBlock.asItem());
+        LinkedInventoryHelper.setItemChannel(be.getChannel(),stack);
+        ItemEntity itemEntity = new ItemEntity(world,pos.getX() + 0.5,pos.getY() + 0.5,pos.getZ() + 0.5,stack);
+        itemEntity.setToDefaultPickupDelay();
+        world.spawnEntity(itemEntity);
+        super.onBreak(world, pos, state, player);
+    }
+
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
